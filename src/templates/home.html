@@ -1,1 +1,9 @@
 {% extends "base.html" %}
+
+{% block head_title %} Homepage - {{ block.super }}{% endblock head_title %}
+
+{% block content %}
+        <p> {{request.user}} {{request.method}} - {{request.user.is_authenticated}} </p>
+
+
+{% endblock content %}
